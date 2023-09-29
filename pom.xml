@@ -14,15 +14,21 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-
-    <dependency>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.11.0</version>
-        <properties>
-         <maven.compiler.source>8</maven.compiler.source>
-         <maven.compiler.target>8</maven.compiler.target>
-        </properties>
-    </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version> <!-- Adjust the version as needed -->
+
+            <configuration>
+                <source>8</source> <!-- Java source compatibility level -->
+                <target>8</target> <!-- Java target compatibility level -->
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
 </project>
